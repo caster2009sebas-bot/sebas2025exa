@@ -1,0 +1,30 @@
+/* Fuente Roboto Mono y fondo gris oscuro */
+body { 
+    font-family: 'Roboto Mono', monospace;
+    background-color: #1F2937;
+}
+
+/* Animación de fondo */
+.animated-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(75, 85, 99, 0.6) 0%, rgba(31, 41, 55, 0) 70%);
+    animation: flow 25s linear infinite alternate;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@keyframes flow {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { transform: translate(200px, 150px) rotate(20deg) scale(1.2); }
+}
